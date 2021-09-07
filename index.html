@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>轮播图</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+        }
+        .banner{
+            width: 800px;
+            margin: 100px auto;
+            display: flex;
+        }
+        .banner span{
+            display: block;
+            width: 500px;
+            height: 500px;
+            background: #0f0;
+            margin-left: 10px;
+            display: none;
+        }
+        .banner span:nth-child(2) {
+            background: #f00;
+        }
+        .banner span:nth-child(3) {
+            background: #00f;
+        }
+        .banner span:nth-child(4) {
+            background: #ff0;
+        }
+        .banner .show{
+            display: block;
+        }
+        ul {
+            position: absolute;
+            left: 388px;
+            bottom: 189px;
+            width: 90px;
+        }
+
+        li {
+            width: 8px;
+            height: 8px;
+            background: #fff;
+            text-align: center;
+            line-height: 30px;
+            color: #fff;
+            border-radius: 50%;
+            float: left;
+            margin-right: 10px;
+        }
+
+        .active {
+            background: red;
+        }
+
+        #left {
+            width: 20px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            color: #ccc;
+            position: absolute;
+            background: #3C3C3C;
+            border-radius: 8px;
+            left: 383px;
+            top: 50%;
+            cursor: pointer;
+            /* display: none; */
+        }
+
+        #right {
+            width: 20px;
+            height: 30px;
+            text-align: center;
+            border-radius: 8px;
+            line-height: 30px;
+            color: #ccc;
+            position: absolute;
+            background: #3C3C3C;
+            right: 660px;
+            top: 50%;
+            cursor: pointer;
+            /* display: none; */
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <span class="show"></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <ul>
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <b id="left">&lt;</b>
+        <b id="right">&gt;</b>
+    </div>
+    <script src="./js/index.js"></script>
+</body>
+</html>
